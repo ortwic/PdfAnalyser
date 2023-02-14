@@ -2,7 +2,7 @@
   "profiles": {
     "OCSoft.PdfAnalyser": {
       "commandName": "Project",
-      "commandLineArgs": "\"..\\..\\samples\\debug.yaml\""
+      "commandLineArgs": "\"$(SolutionDir)/../samples/statements.yad\""
     }
   }
 }

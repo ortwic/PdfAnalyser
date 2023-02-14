@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Authors>OCSoft</Authors>
     <ApplicationIcon>analysing.ico</ApplicationIcon>
+    <StartupObject>OCSoft.PdfAnalyser.Program</StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
