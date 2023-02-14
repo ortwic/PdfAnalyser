@@ -25,4 +25,4 @@ Pdf Analyser is licensed under the Clear BSD License. See License.txt for detail
 
 ## Donation
 
-Buy me a coffee [![buy me a coffee](https://media.giphy.com/media/7kZE0z52Sd9zSESzDA/giphy.gif)](http://buymeacoffee.com/ortwic)
+Buy me a coffee [![buy me a coffee](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODE1ZjhjOWNiYjczZjE3ZjY3ZDMwZTRlNjI0MGNlZjg0ZGEyYmQzNSZjdD1z/RETzc1mj7HpZPuNf3e/giphy.gif)](http://buymeacoffee.com/ortwic)
