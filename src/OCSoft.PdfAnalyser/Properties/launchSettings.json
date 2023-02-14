@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "OCSoft.PdfAnalyser": {
+      "commandName": "Project",
+      "commandLineArgs": "\"..\\..\\samples\\debug.yaml\""
+    }
+  }
+}

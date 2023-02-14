@@ -1,0 +1,48 @@
+---
+# The name of the created file after export.
+Name: sparda
+# The search string to match against the names of files in all subfolders. 
+# This parameter can contain a combination of valid literal path and wildcard (* and ?) characters.
+PdfFiles: "*sparda*"
+
+# File format of exported file. Possible values: txt, csv
+Export: [ csv ]
+
+# Determines which pdf library should be used. Possible values: simple, sharp, location
+#   - simple: iText 7 (7.1.8) with simple text strategy, [https://api.itextpdf.com/iText7/dotnet/7.1.8]
+#   - location: iText 7 (7.1.8) with location strategy, [https://api.itextpdf.com/iText7/dotnet/7.1.8]
+#   - sharp: PDFsharp (1.50.5147) [http://www.pdfsharp.net]
+Strategy: [ simple ]
+
+# Regular expressions for what to search for in the extracted text.
+# Multiple entries mean the content is parsed multiple times for that pattern.
+# Possible capture groups must match its data type.
+#   - booking: date
+#   - date: date
+#   - total: currency
+#   - value: currency
+#   - content: string
+SearchExpr:
+  total: "[*]{5}\\sSaldo\\sper\\s(?<date>\\d{2}\\.\\d{2}\\.\\d{2})\\s[*]{5}\\s+(?<total>-?[\\.\\d]+,\\d{2}).+?(?<content>Rechnung.+?)[*]{3}"
+  value: "\\n((?<booking>\\d{2}\\.\\d{2}\\.\\d{4})\\s(?<content>.+?)\\s+(?<date>\\d{2}\\.\\d{2}\\.\\d{4})\\s+(?<value>-?[\\.\\d]+,\\d{2}))"
+
+# Definition of "content keys" to allocate data meaning "Konto:" will match "Konto: 123456789"
+ContentKeys: [ "SVWZ+", "IBAN+?", "BIC+", "CRED+", "\\wREF+", "ABWE+", "\\d{6}EUR", "\\d{4,6}PAN", "OFFLINEUR", "GIROCARD", "\\bKARTE\\b", "GEBUEHREN" ]
+
+# List of custom tags to match content values.                                              
+Categories:
+  Total: [ "rechnungsabschlu[sß]+\\b" ]
+  Income: [ "gehalt", "verdienstabrechnung" ]
+  Fix: [ "miete", "strom", "energie" ]
+  KFZ: [ "autoservice", "tankstell" ]
+  Out: [ "karte", "sparda-bank", "targobank", "santander", "wuestenrot", "bank", "girocard", "offlineur" ]
+  Com: [ "amazon", "ebay", "otto", "scout", "paypal", "synthesia" ]
+  Med: [ "ortho", "optik", "zahnarzt", "krankenkasse" ]
+  "*": [ "\\w" ] # wildcard for anything else
+# List of keywords to determine bank statement type                                                   
+Keywords:
+  -: Bitte Rückseite beachten
+  UW: SEPA[-\s]+ÜBERWEISUNG
+  LS: SEPA[-\s]+BASISLASTSCHRIFT
+  GH: SEPA[-\s]+LOHN/GEHALT
+  EC: '' # wildcard for anything else

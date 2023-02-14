@@ -1,0 +1,16 @@
+﻿Booking;Date;Total;Value;Typ;Category;Subject;Usage;Contents;Raw
+;2021-05-31;90;0;-;;;;;
+;2021-06-01;0;-450;DA;Fix;Miete Musterstraße 123 ;;;Dauerauftrag Miete Musterstraße 123 
+;2021-06-01;0;100;GS;Spar;Muster-Tante ;;;Gutschrift Überweisung Muster-Tante 
+;2021-06-04;0;-40;EC;Home;PENNY SAGT DANKE // Musterstadt ;;;Einsatz Debit Bezahl. PENNY SAGT DANKE // Musterstadt 
+;2021-06-04;0;-25;EC;Home;DM FIL. 0000 // Musterstadt ;;;Einsatz Debit Bezahl. DM FIL. 0000 // Musterstadt 
+;2021-06-07;0;-25;EC;Home;BAUHAUS GMBH+CO. // Musterstadt ;;;Einsatz Debit Bezahl. BAUHAUS GMBH+CO. // Musterstadt 
+;2021-06-15;0;-90;LS;Med;DAK Gesundheit // Vers.-Nr. 000000000 ;;;Lastschrift DAK Gesundheit // Vers.-Nr. 000000000 
+;2021-06-15;0;560;GS;Income;BAföG ;;;Gutschrift Überweisung BAföG 
+;2021-06-16;0;-45;LS;Fun;Musterstadt Tanzzentrum ;;;Lastschrift Musterstadt Tanzzentrum 
+;2021-06-17;0;-10;-;Out;Ladevorgang Karte HB-Handy-Laden TAN 00000 Mobilfunknummer 0000 1111111 E-PLUS ;;;Ladevorgang Karte HB-Handy-Laden TAN 00000 Mobilfunknummer 0000 1111111 E-PLUS 
+;2021-06-18;0;-60;EC;Home;PENNY SAGT DANKE // Musterstadt ;;;Einsatz Debit Bezahl. PENNY SAGT DANKE // Musterstadt 
+;2021-06-23;0;-15;UW;Spar;Geburtstagsgeschenk für Mo ;;;Überweisung online Geburtstagsgeschenk für Mo 
+;2021-06-27;0;-50;EC;Home;PENNY SAGT DANKE // Musterstadt ;;;Einsatz Debit Bezahl. PENNY SAGT DANKE // Musterstadt 
+;2021-06-29;0;240;GS;Spar;Allerweltshaus Musterstadt 06/2021 ;;;Gutschrift Überweisung Allerweltshaus Musterstadt 06/2021 
+;2021-06-30;180;0;-;;;;;

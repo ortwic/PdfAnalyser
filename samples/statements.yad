@@ -1,0 +1,51 @@
+---
+# The name of the created file after export.
+Name: statements
+
+# The search string to match against the names of files in all subfolders. 
+# This parameter can contain a combination of valid literal path and wildcard (* and ?) characters.
+PdfFiles: "*Kontoauszug_Beispiel*"
+
+# File format of exported file. Possible values: txt, csv
+Export: [ txt, csv ]
+
+# Determines which pdf library should be used. Possible values: simple, sharp, location
+#   - simple: iText 7 (7.1.8) with simple text strategy, [https://api.itextpdf.com/iText7/dotnet/7.1.8]
+#   - location: iText 7 (7.1.8) with location strategy, [https://api.itextpdf.com/iText7/dotnet/7.1.8]
+#   - sharp: PDFsharp (1.50.5147) [http://www.pdfsharp.net]
+Strategy: [ simple ]
+
+# Regular expressions for what to search for in the extracted text.
+# Multiple entries mean the content is parsed multiple times for that pattern.
+# Possible capture groups must match its data type.
+#   - booking: date
+#   - date: date
+#   - total: currency
+#   - value: currency
+#   - content: string
+SearchExpr:
+  total: "Kontostand am (?<date>\\d{2}\\.\\d{2}\\.\\d{4})\\s+(?<total>-?[\\.\\d]+,\\d{2} (-|\\+))"
+  value: "(?s)\\n(?<date>\\d{2}\\.\\d{2}\\.\\d{4})\\s(?<content>.+?)(?<value>-?[\\.\\d]+,\\d{2} (-|\\+) )"
+
+# Definition of "content keys" to allocate data meaning "Konto:" will match "Konto: 123456789"
+ContentKeys: [ "SVWZ+", "IBAN+?", "BIC+", "CRED+", "\\wREF+", "ABWE+", "\\d{6}EUR", "\\d{4,6}PAN", "OFFLINEUR", "GIROCARD", "\\bKARTE\\b", "GEBUEHREN" ]
+
+# List of custom tags to match content values.
+Categories:
+  Income: [ "gehalt", "verdienstabrechnung", "BAföG" ]
+  Fix: [ "miete", "strom", "energie", "kabelfernsehen" ]
+  Home: [ "Penny sagt danke", "DM FIL. ", "Bauhaus GmbH", ]
+  Out: [ "karte", "sparda-bank", "targobank", "santander", "wuestenrot", "bank", "girocard", "offlineur" ]
+  Med: [ "optik", "zahnarzt", "krankenkasse", "gesundheit" ]
+  Fun: [ "Tanzzentrum" ]
+  Spar: [ "dividende", "Tante", "allerweltshaus", "geschenk" ]
+  "*": [ "\\w" ] # wildcard for anything else
+  
+# List of keywords to determine bank statement type
+Keywords:
+  DA: Dauerauftrag[-\s]+
+  UW: Überweisung online[-\s]+
+  LS: Lastschrift[\s]+
+  GS: Gutschrift Überweisung[\s]+
+  EC: Einsatz Debit Bezahl.[\s]+
+  -: '' # wildcard for anything else
