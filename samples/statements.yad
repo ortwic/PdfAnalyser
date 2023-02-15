@@ -2,6 +2,9 @@
 # The name of the created file after export.
 Name: statements
 
+# Determines how date and number format should be interpreted.
+Culture: de-DE
+
 # The search string to match against the names of files in all subfolders. 
 # This parameter can contain a combination of valid literal path and wildcard (* and ?) characters.
 PdfFiles: "*Kontoauszug_Beispiel*"

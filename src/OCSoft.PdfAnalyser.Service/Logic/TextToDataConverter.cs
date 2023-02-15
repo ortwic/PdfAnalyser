@@ -20,9 +20,15 @@ namespace OCSoft.PdfAnalyser.Service
 
         public Config Config { get; }
 
+        public CultureInfo Culture { get; } = CultureInfo.InvariantCulture;
+
         public TextToDataConverter(Config config)
         {
             Config = config;
+            if (Regex.IsMatch(config.Culture, "^[a-z]{2}-[A-Z]{2}$"))
+            {
+                Culture = new CultureInfo(config.Culture);
+            }
         }
 
         public IEnumerable<Entry> Parse(string data)
@@ -60,19 +66,19 @@ namespace OCSoft.PdfAnalyser.Service
             return entry;
         }
 
-        private static string FormatDateString(string date, string format)
+        private string FormatDateString(string date, string format)
         {
             if (!string.IsNullOrEmpty(date) &&
-                DateTime.TryParse(date, CultureInfo.CurrentCulture, DateTimeStyles.None, out DateTime result))
+                DateTime.TryParse(date, Culture, DateTimeStyles.None, out DateTime result))
             {
                 return result.ToString(format);
             }
             return string.Empty;
         }
 
-        private static double FormatCurrency(string value)
+        private double FormatCurrency(string value)
         {
-            double.TryParse(value, NumberStyles.Currency, CultureInfo.CurrentCulture, out double result);
+            double.TryParse(value, NumberStyles.Currency, Culture, out double result);
             return result;
         }
     }

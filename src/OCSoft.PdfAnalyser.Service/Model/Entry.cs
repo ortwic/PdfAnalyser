@@ -1,8 +1,10 @@
 ﻿using OCSoft.Common.Extensions;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace OCSoft.PdfAnalyser.Service.Model
 {
+    [DebuggerDisplay("Bk={Booking};Dt={Date};Tot={Total};Val={Value};Sbj={Subject}")]
     public class Entry
     {
         public string Booking { get; set; }

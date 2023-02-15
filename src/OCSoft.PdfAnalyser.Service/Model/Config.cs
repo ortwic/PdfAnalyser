@@ -8,6 +8,8 @@ namespace OCSoft.PdfAnalyser.Service.Model
     {
         public string Name { get; set; }
 
+        public string Culture { get; set; }
+
         public string PdfFiles { get; set; }
 
         public string[] Export { get; set; }

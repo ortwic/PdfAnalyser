@@ -11,6 +11,7 @@ namespace OCSoft.PdfAnalyser.Test
     {
         private readonly Config _config = new Config
         {
+            Culture = "de-DE",
             SearchExpr = new Dictionary<string, string>
             {
                 { "0", "[*]{5}\\sf00\\sb4r\\s(?<date>\\d{2}\\.\\d{2}\\.\\d{2})\\s[*]{5}\\s+(?<total>-?[\\.\\d]+,\\d{2}).+?RANDOM5.+?[*]{3}" },
