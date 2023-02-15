@@ -25,7 +25,8 @@ namespace OCSoft.PdfAnalyser.Service
         public TextToDataConverter(Config config)
         {
             Config = config;
-            if (Regex.IsMatch(config.Culture, "^[a-z]{2}-[A-Z]{2}$"))
+            if (!string.IsNullOrEmpty(config.Culture) 
+                && Regex.IsMatch(config.Culture, "^[a-z]{2}"))
             {
                 Culture = new CultureInfo(config.Culture);
             }
@@ -55,6 +56,7 @@ namespace OCSoft.PdfAnalyser.Service
         {
             var entry = new Entry
             {
+                Account = Config.Name,
                 Booking = FormatDateString(match.Groups["booking"].Value, "yyyy-MM-dd"),
                 Date = FormatDateString(match.Groups["date"].Value, "yyyy-MM-dd"),
                 Total = FormatCurrency(match.Groups["total"].Value),
