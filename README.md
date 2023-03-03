@@ -19,6 +19,9 @@ You can start OCSoft.PdfAnalyser.exe from the command line like so.
 A smarter way for windows users: 
 You do not have to name your file .yaml but you can choose whatever file extension you like. This allows you to associate the extension with the OCSoft.PdfAnalyser.exe and automatically export all PDF data as one CSV file.
 
+## Evaluation
+You can import the CSV into Power BI for further evaluation or into [KYSA](https://digital-souveraenitaet.de/kysa-know-your-spendings/).
+
 ## License
 
 Pdf Analyser is licensed under the Clear BSD License. See License.txt for details.

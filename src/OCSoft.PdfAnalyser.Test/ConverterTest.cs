@@ -38,6 +38,7 @@ namespace OCSoft.PdfAnalyser.Test
             Assert.IsNotNull(result);
             Assert.AreEqual(expected.Booking, result.Booking);
             Assert.AreEqual(expected.Date, result.Date);
+            Assert.AreEqual(expected.Month, result.Month);
             Assert.AreEqual(expected.Total, result.Total);
             Assert.AreEqual(expected.Value, result.Value);
         }
@@ -52,6 +53,7 @@ namespace OCSoft.PdfAnalyser.Test
                     {
                         Booking = "",
                         Date = "2000-09-30",
+                        Month = "Sep 2000",
                         Total = -123.45
                     },
                     "***** f00 b4r 30.09.00 *****  -123,45 550668 EREF+ K11078550668/000020/RANDOM5 *** "
@@ -62,6 +64,7 @@ namespace OCSoft.PdfAnalyser.Test
                     {
                         Booking = "2000-09-30",
                         Date = "2000-09-30",
+                        Month = "Sep 2000",
                         Value = -123.45
                     },
                     "30.09.2000 \r\nher3 is S0M3 random date: 29.09.2000 plus another \r\n01.09.2000 +NUMS K11078550668 EREF+ K11078550668/000020/19ZVS06F 30.09.2000 \n-123,45"

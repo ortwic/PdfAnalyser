@@ -48,5 +48,5 @@ Keywords:
   -: Bitte Rückseite beachten
   UW: SEPA[-\s]+ÜBERWEISUNG
   LS: SEPA[-\s]+BASISLASTSCHRIFT
-  GH: SEPA[-\s]+LOHN/GEHALT
+  GS: SEPA[-\s]+LOHN/GEHALT
   EC: '' # wildcard for anything else

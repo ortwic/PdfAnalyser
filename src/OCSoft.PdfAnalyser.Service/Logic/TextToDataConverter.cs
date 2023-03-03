@@ -56,9 +56,9 @@ namespace OCSoft.PdfAnalyser.Service
         {
             var entry = new Entry
             {
-                Account = Config.Name,
                 Booking = FormatDateString(match.Groups["booking"].Value, "yyyy-MM-dd"),
                 Date = FormatDateString(match.Groups["date"].Value, "yyyy-MM-dd"),
+                Month = FormatDateString(match.Groups["date"].Value, "MMM yyyy"),
                 Total = FormatCurrency(match.Groups["total"].Value),
                 Value = FormatCurrency(match.Groups["value"].Value),
                 Raw = match.Groups["content"].Value

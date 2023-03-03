@@ -7,11 +7,11 @@ namespace OCSoft.PdfAnalyser.Service.Model
     [DebuggerDisplay("Bk={Booking};Dt={Date};Tot={Total};Val={Value};Sbj={Subject}")]
     public class Entry
     {
-        public string Account { get; set; }
-
         public string Booking { get; set; }
 
         public string Date { get; set; }
+
+        public string Month { get; set; }
 
         public double Total { get; set; }
 
