@@ -2,6 +2,10 @@
 
 Pdf Analyser is a tool to convert PDF files to CSV.
 
+## Requirements
+
+.NET8.0 Runtime on Windows or Linux
+
 ## Configuration
 
 A YAML file defines what PDF files should be parsed and how the content is structured. Runnable examples can be found in the samples folder. 

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,7 +9,6 @@
     <PackageReference Include="itext7" Version="7.1.8" />
     <PackageReference Include="OCSoft.Common" Version="0.1.0" />
     <PackageReference Include="PDFsharpNetStandard2" Version="1.51.4845" />
-    <PackageReference Include="System.Drawing.Common" Version="4.6.0" />
     <PackageReference Include="YamlDotNet" Version="8.0.0" />
   </ItemGroup>
 

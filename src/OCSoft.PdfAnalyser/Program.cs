@@ -21,8 +21,8 @@ namespace OCSoft.PdfAnalyser
                 Console.WriteLine("No config file specified.");
             }
 
-            Console.WriteLine("Press any key to quit.");
-            _ = Console.ReadKey();
+            Console.WriteLine("Press enter to quit.");
+            Console.Read();
         }
     }
 }

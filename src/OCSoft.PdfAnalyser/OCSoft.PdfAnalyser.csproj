@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Authors>OCSoft</Authors>
     <ApplicationIcon>analysing.ico</ApplicationIcon>
     <StartupObject>OCSoft.PdfAnalyser.Program</StartupObject>
