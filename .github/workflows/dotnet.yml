@@ -32,7 +32,7 @@ jobs:
       run: dotnet test src/OCSoft.PdfAnalyser.Test/OCSoft.PdfAnalyser.Test.csproj -c Release --no-build --verbosity normal
       
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: PdfAnalyser
         path: dist
