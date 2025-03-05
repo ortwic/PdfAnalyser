@@ -5,10 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BitMiracle.Docotic.Pdf" Version="5.10.9957" />
     <PackageReference Include="itext7" Version="7.1.8" />
     <PackageReference Include="OCSoft.Common" Version="0.1.0" />
-    <PackageReference Include="PDFsharpNetStandard2" Version="1.51.4845" />
     <PackageReference Include="YamlDotNet" Version="8.0.0" />
   </ItemGroup>
 

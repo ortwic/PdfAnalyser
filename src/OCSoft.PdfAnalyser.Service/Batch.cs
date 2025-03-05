@@ -71,10 +71,6 @@ namespace OCSoft.PdfAnalyser.Service
                 EventLogger.Trace($"Reading pdf files with {strategy} strategy.");
                 switch (strategy)
                 {
-                    case "sharp":
-                        ProcessFiles<PdfSharpExtractor>(files);
-                        break;
-
                     case "location":
                         ProcessFiles<PdfLocationTextExtractor>(files);
                         break;
